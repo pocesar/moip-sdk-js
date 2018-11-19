@@ -2,7 +2,7 @@
   "name": "moip-sdk-js",
   "version": "2.1.1",
   "description": "Moip SDK Node.js",
-  "main": "src/index.js",
+  "module": "src/index.js",
   "repository": "https://github.com/brunoosilva/moip-sdk-js",
   "author": "Bruno Oliveira",
   "license": "MIT",
