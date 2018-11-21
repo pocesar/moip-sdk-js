@@ -2,12 +2,14 @@ import MoipValidator from './validator'
 import Encrypt from './encrypt'
 
 export default class MoipCreditCard {
-  static setEncrypter (encrypter, name) {
+  static creditCard: any
+
+  static setEncrypter (encrypter: any, name: string) {
     Encrypt.setEncrypter(encrypter, name)
     return this
   }
 
-  static setCreditCard (creditCard) {
+  static setCreditCard (creditCard: any) {
     if (creditCard) {
       this.creditCard = Object.assign(creditCard, {
         number: MoipValidator.normalizeCardNumber(creditCard.number)
@@ -21,7 +23,9 @@ export default class MoipCreditCard {
     return this.creditCard
   }
 
-  static setPubKey (pubKey) {
+  static pubKey: string
+
+  static setPubKey (pubKey: string) {
     this.pubKey = pubKey
     return this
   }

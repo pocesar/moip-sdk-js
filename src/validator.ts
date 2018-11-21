@@ -129,7 +129,7 @@ export default class MoipValidator {
 
   static isExpiryDateValid (expiryMonth, expiryYear) {
     let month = parseInt(expiryMonth, 10)
-    let year = parseInt(expiryYear, 10)
+    let year: string | number = parseInt(expiryYear, 10)
 
     if (month < 1 || month > 12) {
       return false
@@ -176,7 +176,7 @@ export default class MoipValidator {
       this.isExpiryDateValid(expirationMonth, expirationYear)
   }
 
-  static cardType (creditCardNumber, loose) {
+  static cardType (creditCardNumber, loose?) {
     const cardNumber = this.normalizeCardNumber(creditCardNumber)
     const getBin = (cardNum) => cardNum.substring(0, 6)
 
